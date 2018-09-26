@@ -1,0 +1,210 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+ 
+<web-app>
+  	<display-name>success track</display-name>
+  	
+	  <filter>
+	  	<filter-name>NoCacheFilter</filter-name>
+	  	<display-name>NoCacheFilter</display-name>
+	  	<description></description>
+	  	<filter-class>com.sf.authentication.NoCacheFilter</filter-class>
+	  </filter>
+	  
+	  <filter>
+	  	<filter-name>Logger</filter-name>
+	  	<display-name>Logger</display-name>
+	  	<description></description>
+	  	<filter-class>com.sf.authentication.Logger</filter-class>
+	  </filter>
+	  
+	  <filter-mapping>
+	  	<filter-name>NoCacheFilter</filter-name>
+	  	<url-pattern>/Home</url-pattern>
+	  </filter-mapping> 
+	  <filter-mapping>
+	  	<filter-name>NoCacheFilter</filter-name>
+	  	<url-pattern>/RequisitionCreator</url-pattern>
+	  </filter-mapping> 
+	  <filter-mapping>
+	  	<filter-name>NoCacheFilter</filter-name>
+	  	<url-pattern>/UserProfile</url-pattern>
+	  </filter-mapping>
+	  <filter-mapping>
+	  	<filter-name>Logger</filter-name>
+	  	<url-pattern>/Logger</url-pattern>
+	  </filter-mapping>
+  
+	  <servlet>
+	  	<servlet-name>Signup</servlet-name>
+	  	<display-name>Signup</display-name>
+	  	<description></description>
+	  	<servlet-class>com.sf.controller.Signup</servlet-class>
+	  </servlet>
+	  <servlet>
+	  	<servlet-name>Login</servlet-name>
+	  	<display-name>Login</display-name>
+	  	<description></description>
+	  	<servlet-class>com.sf.controller.Login</servlet-class>
+	  </servlet>
+	  <servlet>
+	  	<servlet-name>Signout</servlet-name>
+	  	<display-name>Signout</display-name>
+	  	<description></description>
+	  	<servlet-class>com.sf.controller.Signout</servlet-class>
+	  </servlet>
+	  <servlet>
+	  	<servlet-name>UserProfile</servlet-name>
+	  	<display-name>UserProfile</display-name>
+	  	<description></description>
+	  	<servlet-class>com.sf.controller.UserProfile</servlet-class>
+	  </servlet>
+	  <servlet>
+	  	<servlet-name>Home</servlet-name>
+	  	<display-name>Home</display-name>
+	  	<description></description>
+	  	<servlet-class>com.sf.controller.Home</servlet-class>
+	  </servlet>
+	  <servlet>
+	  	<servlet-name>RequisitionCreator</servlet-name>
+	  	<display-name>RequisitionCreator</display-name>
+	  	<description></description>
+	  	<servlet-class>com.sf.controller.RequisitionCreator</servlet-class>
+	  </servlet>
+	  <servlet>
+	  	<servlet-name>ApplicationCreator</servlet-name>
+	  	<display-name>ApplicationCreator</display-name>
+	  	<description></description>
+	  	<servlet-class>com.sf.controller.ApplicationCreator</servlet-class>
+	  </servlet>
+	  <servlet>
+	  	<servlet-name>ErrorHandler</servlet-name>
+	  	<display-name>ErrorHandler</display-name>
+	  	<description></description>
+	  	<servlet-class>com.sf.controller.ErrorHandler</servlet-class>
+	  </servlet>
+	  <servlet>
+	  	<servlet-name>ProfilePictureUpdate</servlet-name>
+	  	<display-name>ProfilePictureUpdate</display-name>
+	  	<description></description>
+	  	<servlet-class>com.sf.controller.ProfilePictureUpdate</servlet-class>
+	  </servlet>
+	  <servlet>
+	  	<servlet-name>UserLookup</servlet-name>
+	  	<display-name>UserLookup</display-name>
+	  	<description></description>
+	  	<servlet-class>com.sf.controller.UserLookup</servlet-class>
+	  </servlet>
+	  <servlet>
+	  	<servlet-name>LoginAuthenticator</servlet-name>
+	  	<display-name>LoginAuthenticator</display-name>
+	  	<description></description>
+	  	<servlet-class>com.sf.authentication.LoginAuthenticator</servlet-class>
+	  </servlet>
+	  <servlet>
+	  	<servlet-name>RequisitionAppliedStatusChecker</servlet-name>
+	  	<display-name>RequisitionAppliedStatusChecker</display-name>
+	  	<description></description>
+	  	<servlet-class>com.sf.controller.RequisitionAppliedStatusChecker</servlet-class>
+	  </servlet>
+	  <servlet>
+	  	<servlet-name>CandidateListForRequisition</servlet-name>
+	  	<display-name>CandidateListForRequisition</display-name>
+	  	<description></description>
+	  	<servlet-class>com.sf.controller.CandidateListForRequisition</servlet-class>
+	  </servlet>
+	  
+	  <servlet-mapping>
+	  	<servlet-name>Signup</servlet-name>
+	  	<url-pattern>/Signup</url-pattern>
+	  </servlet-mapping>
+  
+	  
+	  <servlet-mapping>
+	  	<servlet-name>Login</servlet-name>
+	  	<url-pattern>/Login</url-pattern>
+	  </servlet-mapping>
+  
+	  
+	  <servlet-mapping>
+	  	<servlet-name>Signout</servlet-name>
+	  	<url-pattern>/Signout</url-pattern>
+	  </servlet-mapping>
+	  
+	  <servlet-mapping>
+	  	<servlet-name>UserProfile</servlet-name>
+	  	<url-pattern>/UserProfile</url-pattern>
+	  </servlet-mapping>
+	  <servlet-mapping>
+	  	<servlet-name>Home</servlet-name>
+	  	<url-pattern>/Home</url-pattern>
+	  </servlet-mapping>
+	  <servlet-mapping>
+	  	<servlet-name>RequisitionCreator</servlet-name>
+	  	<url-pattern>/RequisitionCreator</url-pattern>
+	  </servlet-mapping>
+	  <servlet-mapping>
+	  	<servlet-name>ApplicationCreator</servlet-name>
+	  	<url-pattern>/ApplicationCreator</url-pattern>
+	  </servlet-mapping>
+  
+  
+	  
+		<servlet-mapping>
+		   <servlet-name>ErrorHandler</servlet-name>
+		   <url-pattern>/ErrorHandler</url-pattern>
+		</servlet-mapping>
+		<servlet-mapping>
+			<servlet-name>ProfilePictureUpdate</servlet-name>
+			<url-pattern>/ProfilePictureUpdate</url-pattern>
+		</servlet-mapping>
+		<servlet-mapping>
+			<servlet-name>UserLookup</servlet-name>
+			<url-pattern>/UserLookup</url-pattern>
+		</servlet-mapping>
+		<servlet-mapping>
+			<servlet-name>LoginAuthenticator</servlet-name>
+			<url-pattern>/LoginAuthenticator</url-pattern>
+		</servlet-mapping>
+		<servlet-mapping>
+			<servlet-name>RequisitionAppliedStatusChecker</servlet-name>
+			<url-pattern>/RequisitionAppliedStatusChecker</url-pattern>
+		</servlet-mapping>
+		<servlet-mapping>
+			<servlet-name>CandidateListForRequisition</servlet-name>
+			<url-pattern>/CandidateListForRequisition</url-pattern>
+		</servlet-mapping>
+	<welcome-file-list>
+	  	<welcome-file>index.html</welcome-file>
+	  	<welcome-file>index.jsp</welcome-file>
+	 </welcome-file-list>
+	<error-page>
+	   <error-code>404</error-code>
+	   <location>/ErrorHandler</location>
+	</error-page>
+	
+	<error-page>
+	   <error-code>403</error-code>
+	   <location>/ErrorHandler</location>
+	</error-page>
+
+	<error-page>
+	   <exception-type>javax.servlet.ServletException</exception-type >
+	   <location>/ErrorHandler</location>
+	</error-page>
+	
+	<error-page>
+	   <exception-type>java.io.IOException</exception-type >
+	   <location>/ErrorHandler</location>
+	</error-page>
+	<error-page>
+	   <exception-type>java.lang.Exception</exception-type >
+	   <location>/ErrorHandler</location>
+	</error-page>
+	<error-page>
+	   <exception-type>java.lang.NullPointerException</exception-type >
+	   <location>/ErrorHandler</location>
+	</error-page>
+  
+</web-app>
